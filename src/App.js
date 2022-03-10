@@ -4,7 +4,8 @@ import Cards from './Components/Cards/Cards';
 import Topbar from './Components/Topbar/Topbar';
 import About from './Components/About/About';
 import OurMenu from './Components/OurMenu/OurMenu';
-// import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import Contact from './Components/Contact/Contact';
+ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 
 
@@ -16,6 +17,7 @@ function App() {
       <Topbar/>
       <About/>
       <OurMenu/>
+      <Contact/>
     </>
       
       
