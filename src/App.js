@@ -6,7 +6,7 @@ import About from './Components/About/About';
 import OurMenu from './Components/OurMenu/OurMenu';
 import Contact from './Components/Contact/Contact';
  import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-
+// import Form from './Components/Form/Form';
 
 
 
@@ -17,7 +17,8 @@ function App() {
       <Topbar/>
       <About/>
       <OurMenu/>
-      <Contact/>
+      <Contact />
+      {/* <Form/> */}
     </>
       
       

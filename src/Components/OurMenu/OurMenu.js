@@ -2,13 +2,13 @@ import React from 'react'
 
  function OurMenu() {
   return (
-    <div style={{padding:'64px',margin:'16px', opicity:'1'}} className='row '>
+    <div style={{padding:'80px' , margin:'0px'}} className='row '>
         <div   className='col '>
             <h1 className='text-center'>Our Menu</h1><br />
             <h4>Bread Basket</h4>
             <p className='text-muted'>Assortment of fresh baked fruit breads and muffins 5.50</p> <br />
             <h4  >Honey Almond Granola With Fruits</h4>
-            <p className='text-muted'>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+            <p style={{fontSize:'14px'}} className='text-muted'>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
             <br />
             <h4>Belgian Waffle</h4>
             <p className='text-muted'>Vanilla flavored batter with malted flour 7.50</p> <br />
