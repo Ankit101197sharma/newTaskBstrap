@@ -7,21 +7,28 @@ import classes from "./Topbar.module.css"
       
     <div className='w3-top'>
         
-    <div className="navbar navbar-light bg-light " style={{letterSpacing:'4px'}}>
-    <a style={{marginLeft:'12px'}} href="#home" className='navbar-brand hover-overlay' >Gourmet au Catering</a>
+    <div className="navbar navbar-light bg-white shadow p-2 " style={{letterSpacing:'4px'}}>
+    <a style={{marginLeft:'12px',fontSize:'14px'}} href="#home" className='navbar-brand hover-overlay' >Gourmet au Catering</a>
     
-    <div  className="d-flex justify-content-sm-end ">
-      <a style={{border:'none', color:'black'}}  href="#about" className="btn btn-outline-secondary" >About</a>
-      <a style={{border:'none', color:'black'}} href="#menu" className="btn btn-outline-secondary"><span className={classes.menuIcon}>Menu</span></a>
-      <a style={{border:'none', color:'black'}} href="#contact" className="btn btn-outline-secondary">Contact</a>
+    <div  className="d-flex justify-content-sm-end  m-1 ">
+      <a  style={{border:'none'}} href="#about" className="btn btn-outline-light  text-dark  " >About</a>
+      <a style={{border:'none'}} href="#menu" className="btn btn-outline-light text-dark"><span className={classes.menuIcon}>Menu</span></a>
+      <a style={{border:'none'}} href="#contact" className="btn btn-outline-light text-dark">Contact</a>
     </div>
   </div>
 
         
 </div>
-<div style={{maxWidth:'1600px', minWidth:'500px'}}>
-  <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style={{width:"1600px", height:'800px'}} alt=" burger" />  
+<div style={{position:"relative"}}>
+<div style={{maxWidth:'100%', minWidth:'500px'}}>
+  <img className='img-fluid' src="https://www.w3schools.com/w3images/hamburger.jpg" style={{width:"1400px", height:'650px'}} alt=" burger" />  
+  <div className={classes.sideText}>
+  <h1 className='xxlarge'>Le Catering</h1>
 </div>
+</div>
+
+</div>
+
 </>
   )
 }

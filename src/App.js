@@ -1,6 +1,6 @@
 
 import './App.css';
-import Cards from './Components/Cards/Cards';
+// import Cards from './Components/Cards/Cards';
 import Topbar from './Components/Topbar/Topbar';
 import About from './Components/About/About';
 import OurMenu from './Components/OurMenu/OurMenu';
@@ -13,12 +13,12 @@ import Contact from './Components/Contact/Contact';
 function App() {
   return (
     <>
-      <Cards/>
+      
       <Topbar/>
       <About/>
       <OurMenu/>
       <Contact />
-      {/* <Form/> */}
+     
     </>
       
       
