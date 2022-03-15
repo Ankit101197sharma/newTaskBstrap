@@ -6,7 +6,7 @@ import classes from "./About.module.css"
     <>
     <div style={{padding:'66px', height:'120vh', width:'90%', margin:'auto'}}  className="row  ">
         <div  className='col  hide-small' >
-            <img className='img-fluid' src="https://www.w3schools.com/w3images/tablesetting2.jpg" className='w3-round img-fluid w3-opacity-min' style={{width:'500px' ,height:"600px"}} alt="burgerking" />
+            <img src="https://www.w3schools.com/w3images/tablesetting2.jpg" className='w3-round img-fluid w3-opacity-min' style={{width:'500px' , height:"600px"}} alt="burgerking" />
         </div>
         <div   style={{marginTop:"8px"}} className='col p-2' >
             <h1 className='text-center' >About Catering </h1><br />
