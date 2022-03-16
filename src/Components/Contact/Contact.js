@@ -23,7 +23,7 @@ import {} from "./Contact.module.css"
      
      const newReccord={...formValues}
      
-     alert("form data :" + newReccord )
+     alert("form data :" + formValues.Name + " "+ formValues.People + " " + formValues.Date + " " + formValues.Text )
      setRecords([...records, newReccord]);
     //  setFormValues({name:" ", people:'', date:'', text:''})
     console.log(records)
