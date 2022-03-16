@@ -2,26 +2,33 @@ import React,{useState} from 'react'
 import {} from "./Contact.module.css"
 
  function Contact() {
-   const [Name , setName]= useState('');
-   const [People, setPeople] = useState('');
-   const [Date, setDate] = useState('');
-   const [Text, setTextarea] = useState('');
-   const submit = (e) => {
+  //  const initialValues = {name:"" , people:'' , date:'', text:""};
+   const [formValues , setFormValues]= useState({
+    Name:'',
+    People:'',
+    Date:'',
+    Text:''
+    
+   });
+   const [records, setRecords]= useState([]);
+   
+   const handleChange = (e) => {
+     const name = e.target.name;
+     const value= e.target.value;
+    //  console.log(name, value)
+     setFormValues({...formValues, [name]: value})
+    }
+   const handleSubmit = (e) => {
      e.preventDefault();
-     const newEntry= {
-       name:Name,
-       people:People,
-       date:Date,
-       text:Text,
-
-     };
-     setName('');
-     setPeople('');
-     setDate('');
-     setTextarea('');
-     console.log(newEntry)
-     alert( "form data : "  +  "name: "+ Name + ' ' +   People  + " " + Date  + " " + Text  );
+     
+     const newReccord={...formValues}
+     
+     alert("form data :" + newReccord )
+     setRecords([...records, newReccord]);
+    //  setFormValues({name:" ", people:'', date:'', text:''})
+    console.log(records)
    }
+     
   return (
     <>
     <div  className='container'> 
@@ -31,12 +38,12 @@ import {} from "./Contact.module.css"
             <p className="text-info text-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
             <p >You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
 
-    <form  target="_blank" onSubmit={submit}>
-      <p><input   className="form-control " type="text" placeholder="Name" required=""  value={Name} name="Name" onChange={(e) => setName(e.target.value)} /></p>
-      <p><input className="form-control padding-16" type="number" value={People} placeholder="How many people" required="" people="People"  onChange={(e) => setPeople(e.target.value)} /></p>
-      <p><input className="form-control padding-16" type="date" placeholder="Date " value={Date} required="" date="date"   onChange={(e) => setDate(e.target.value)}  /></p>
+    <form  target="_blank" onSubmit={handleSubmit}>
+      <p><input   className="form-control " type="text" placeholder="Name" required=""  value={formValues.Name} name="Name" onChange={handleChange} /></p>
+      <p><input className="form-control padding-16" type="number" value={formValues.People} placeholder="How many people" required=""  name="People"  onChange={handleChange} /></p>
+      <p><input className="form-control padding-16" type="date" placeholder="Date " value={formValues.Date} required=""  name="Date"   onChange={handleChange} /></p>
  
-      <textarea className="form-control mb-2 w-9" rows="5" id="comment" text="text" value={Text} onChange={(e) => setTextarea(e.target.value)}></textarea>
+      <textarea className="form-control mb-2 w-9" rows="5" id="comment" name="Text" value={formValues.Text} onChange={handleChange}></textarea>
       <p><button style={{backgroundColor:'#f1f1f1',color:'black', border:"0"}} class="btn btn-secondary " type="submit">SEND MESSAGE</button></p>
     </form>
         </div>
